@@ -19,27 +19,23 @@
   <section id="projects" class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
-      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Project Card -->
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">       
         <!-- Arbeeter Project Card -->
         <div class="bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-800">
           <h3 class="text-2xl font-semibold mb-2">Arbeeter – Chess Tournament Organizer</h3>
           <p class="text-gray-400 mb-4">
             A browser-based application designed to streamline chess tournament management. Arbeeter allows organizers to import player data via CSV, generate pairings based on ELO ratings or standings, handle BYE rounds, and export results—all within the browser without the need for server-side processing.
           </p>
-          <!-- Images Side-by-Side -->
-          <div class="flex flex-col md:flex-row gap-4 mb-4">
-            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg">
-              <img src="photos for arbeeter/IMG_0006.jpeg" alt="Arbeeter Dashboard" class="w-full h-full object-cover" />
-            </div>
-            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded-lg">
-              <img src="photos for arbeeter/arbeeter screenshot.png" alt="Pairings View" class="w-full h-full object-cover" />
-            </div>
+          <div class="flex flex-wrap gap-4 mb-4">
+            <img src="photos for arbeeter/IMG_0006.jpeg" alt="Arbeeter Dashboard" class="rounded-lg w-full sm:w-[48%] max-w-full object-contain">
+            <img src="photos for arbeeter/arbeeter screenshot.png" alt="Pairings View" class="rounded-lg w-full sm:w-[48%] max-w-full object-contain">
           </div>
-
-          <a href="https://github.com/SMOO1/arbeeter" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
-          <a href="https://pcsschess.vercel.app/" target="_blank" class="hover:underline">Live Demo</a>
+          <div class="flex flex-col sm:flex-row gap-4 text-blue-500">
+            <a href="https://github.com/SMOO1/arbeeter" target="_blank" class="hover:underline">View on GitHub →</a>
+            <a href="https://pcsschess.vercel.app/" target="_blank" class="hover:underline">Live Demo →</a>
+          </div>
         </div>
+
 
         <div class="bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-800">
           <h3 class="text-2xl font-semibold mb-2">Portfolio Template</h3>
