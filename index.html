@@ -87,5 +87,47 @@
     </div>
   </section>
 
+<script>
+  const cloudContainer = document.getElementById("cloud-container");
+
+  function spawnCloud(top, duration) {
+    const cloud = document.createElement("div");
+    cloud.classList.add("cloud");
+    cloud.style.top = `${top}px`;
+    cloud.style.left = `-${Math.random() * 100}px`;
+    cloud.style.animationDuration = `${duration}s`;
+
+    cloudContainer.appendChild(cloud);
+
+    setTimeout(() => cloud.remove(), duration * 1000);
+  }
+
+  // Spawn clouds as user scrolls
+  function spawnCloudsOnScroll() {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const cloudsPerScreen = 3;
+
+    for (let i = 0; i < cloudsPerScreen; i++) {
+      const top = scrollY + Math.random() * viewportHeight;
+      const duration = 30 + Math.random() * 30;
+      spawnCloud(top, duration);
+    }
+  }
+
+  // Initial clouds
+  for (let i = 0; i < 10; i++) {
+    const top = Math.random() * window.innerHeight;
+    const duration = 30 + Math.random() * 30;
+    spawnCloud(top, duration);
+  }
+
+  // Spawn more clouds as user scrolls
+  window.addEventListener('scroll', () => {
+    if (Math.random() < 0.3) spawnCloudsOnScroll(); // limit cloud spam
+  });
+</script>
+
+  
 </body>
 </html>
